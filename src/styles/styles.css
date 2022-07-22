@@ -26,3 +26,8 @@ h1 {
 .code {
     color: blue;
 }
+
+.image{
+    width: 1200px;
+    margin: 0 auto;
+}
