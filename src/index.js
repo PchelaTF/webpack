@@ -18,3 +18,9 @@ $('pre').addClass('code').html(post.toString());
 // console.log('JSON:', json);
 // console.log('XML:', xml);
 // console.log('CSV:', csv);
+
+async function test() {
+    return await Promise.resolve('Async is working');
+}
+
+test().then(console.log);

@@ -46,7 +46,7 @@ module.exports = {
     context: path.resolve(__dirname, 'src'), // Webpack будет отталкиватся от этой папки. В entry можно прописывать путь без указания этой папки
     mode: 'development', // мод разработка или продакшн
     entry: {
-        main: './index.js',
+        main: ['@babel/polyfill', './index.js'],
         analytics: './analytics.js'
     }, // входноной (начальный) файл
     output: { // куда складывать и это обьект
@@ -85,6 +85,7 @@ module.exports = {
         hot: isDev,
     },
     target: 'web',
+    devtool: isDev ? 'source-map' : '',
     module: {
         rules: [
             {
@@ -121,6 +122,16 @@ module.exports = {
             {
                 test: /\.csv$/,
                 use: ['csv-loader']
+            },
+            {
+                test: /\.m?js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env']
+                    }
+                }
             },
         ]
     }

@@ -33,9 +33,13 @@ compile less, sass
 7) less less-loader
 8) sass-loader
 9) node-sass
+10) babel-loader
 
 # packages
-1) npm install normalize.css
+1) normalize.css
 2) JQuery
 3) webpack-dev-server
 4) cross-env
+5) @babel/core
+6) @babel/preset-env
+7) @babel/polyfill

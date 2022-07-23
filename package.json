@@ -13,6 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/PchelaTF/webpack.git"
   },
+  "browserslist": "> 0.25%, not dead",
   "keywords": [
     "js",
     "javascript",
@@ -25,6 +26,9 @@
   },
   "homepage": "https://github.com/PchelaTF/webpack#readme",
   "devDependencies": {
+    "@babel/core": "^7.18.9",
+    "@babel/preset-env": "^7.18.9",
+    "babel-loader": "^8.2.5",
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^11.0.0",
     "cross-env": "^7.0.3",
@@ -48,6 +52,7 @@
     "xml-loader": "^1.2.1"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.12.1",
     "jquery": "^3.6.0",
     "normalize.css": "^8.0.1"
   }
